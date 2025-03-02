@@ -33,15 +33,15 @@ except Exception as e:
 
 # Email Alert Function
 def send_email_alert(message):
-    sender = "mushahidhussain882@gmail.com"
-    recipient = "mushahid.bscssef20@iba-suk.edu.pk"
+    sender = "your_sending_email"
+    recipient = "your_recieving_email"
     subject = "NIDS Alert"
     email_body = f"Subject: {subject}\n\n{message}"
     
     try:
         with smtplib.SMTP("smtp.gmail.com", 587) as server:
             server.starttls()
-            server.login("mushahidhussain882@gmail.com","uuov hnwa zomg uvcz")
+            server.login("eamil_username","password") # try generating app password from gmail by searching app passwords and use that password here not actual passowrd as gmail does not allow login to weak apps.
             server.sendmail(sender, recipient, email_body)
         print("[+] Email alert sent successfully!")
     except Exception as e:
