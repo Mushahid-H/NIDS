@@ -1,0 +1,35 @@
+rules:
+  - protocol: "TCP"
+    dst_port: 22
+    threshold: 5
+    message: "Possible SSH brute force detected!"
+
+  - protocol: "TCP"
+    dst_port: 80
+    threshold: 10
+    message: "HTTP scanning detected!"
+
+  - protocol: "TCP"
+    dst_port: 443
+    threshold: 5
+    message: "HTTPS scanning detected!"
+
+  - protocol: "TCP"
+    dst_port: 3306
+    threshold: 3
+    message: "Possible MySQL brute force attack!"
+
+  - protocol: "TCP"
+    dst_port: 5900
+    threshold: 2
+    message: "Possible VNC attack detected!"
+
+  - protocol: "TCP"
+    dst_port: 3389
+    threshold: 3
+    message: "RDP brute force attack detected!"
+
+  - protocol: "TCP"
+    dst_port: 5432
+    threshold: 3
+    message: "PostgreSQL brute force attack detected!"
