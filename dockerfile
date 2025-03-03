@@ -14,7 +14,7 @@ WORKDIR /app
 COPY nids.py rules.yml /app/
 
 # Install Python dependencies
-RUN pip install --no-cache-dir scapy elasticsearch pyyaml smtplib
+RUN pip install --no-cache-dir scapy elasticsearch pyyaml
 
 # Start the NIDS script
 CMD ["python3", "/app/nids.py"]
